@@ -50,7 +50,11 @@
         <p>Te amo ♥</p>
     </section>
 
-    <p id="nao">Tá bom.</p>
+    <section class="sections oitava">
+        <img src="" alt="">
+        <p>Tá bom.</p>
+    </section>
+
 
     <script>
         let primeira = document.querySelector(".primeira")
@@ -85,12 +89,11 @@
             }
         }
         function nao() {
-
-            document.getElementById("nao").style.display = "flex"
-
             for (let i = 0; i < sections.length; i++) {
                 sections[i].style.display = "none";
             }
+            document.querySelector(".oitava").style.display = "flex"
+
         }
 
     </script>
