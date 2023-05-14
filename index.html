@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Toxic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sections primeira">
+        <h1>Oii gata</h1>
+        <p>Eu fiz um mini questionario com apenas 3 perguntas simples</p>
+        <p>Responda com sinceridade, por favor.</p>
+        <button onclick="avancar(1)">Começar</button>
+    </section>
+    <section class="sections segunda">
+        <img src="" alt="">
+        <p>Você me ama de verdade?</p>
+        <div class="cntrBtn">
+            <button class="sim" onclick="avancar(2)">Sim</button>
+            <button class="nao" onclick="nao()">Não</button>
+        </div>
+    </section>
+    <section class="sections terceira">
+        <img src="" alt="">
+        <p>Você gosta de me ver feliz?</p>
+        <div class="cntrBtn">
+            <button class="sim" onclick="avancar(3)">Sim</button>
+            <button class="nao" onclick="nao()">Não</button>
+        </div>
+    </section>
+    <section class="sections quarta">
+        <img src="" alt="">
+        <p>Você vai me mandar fototeta?</p>
+        <div class="cntrBtn">
+            <button class="sim" onclick="avancar(6)">Sim</button>
+            <button class="nao" onclick="avancar(4)">Não</button>
+        </div>
+    </section>
+    <section class="sections quinta">
+        <p class="carregando">Analizando respostas...</p>
+    </section>
+    <section class="sections sexta">
+        <p class="erro">Suas respostas são contraditorias, algo está errado!</p>
+        <button class="tentarNovamente"  onclick="avancar(0)">Tentar novamente</button>
+    </section>
+
+    <section class="sections setima">
+        <p>Te amo ♥</p>
+    </section>
+
+    <p id="nao">Tá bom.</p>
+
+    <script>
+        let primeira = document.querySelector(".primeira")
+        let segunda = document.querySelector(".segunda")
+        let terceira = document.querySelector(".terceira")
+        let quarta = document.querySelector(".quarta")
+        let quinta = document.querySelector(".quinta")
+        let sexta = document.querySelector(".sexta")
+
+        let sections  = document.querySelectorAll(".sections")
+
+        
+        avancar(0)
+        function avancar(sectonExib) {
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+            sections[sectonExib].style.display = "flex";
+
+            if(sectonExib == 4){
+                console.log("4");
+                setTimeout(() => {
+                    sections[4].style.display = "none";
+                    sections[5].style.display = "flex";
+                }, 3000);
+            }
+            if(sectonExib == 6){
+                console.log("boa mnr");
+                sections[6].style.display = "flex";
+
+                window.open("https://api.whatsapp.com/send?phone=+5524998428760&text=Você%20merece%20uma%20fototeta %20da%20sua%20namorada%20linda%20e%20gostosa,%20vou%20te%20mandar%20agr")
+            }
+        }
+        function nao() {
+
+            document.getElementById("nao").style.display = "flex"
+
+            for (let i = 0; i < sections.length; i++) {
+                sections[i].style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+</html>
