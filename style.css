@@ -4,6 +4,7 @@
 }
 body{
     background-color: rgb(153, 43, 226);
+    background-image: linear-gradient(rgb(153, 43, 226), rgb(115, 23, 175));
     display: flex;
     justify-content: center;
     align-items: center;
