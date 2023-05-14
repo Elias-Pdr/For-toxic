@@ -34,6 +34,11 @@ p{
     color: white;
     text-align: center;
 }
+.cntrBtn{
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
 button{
     padding: 8px 40px;
     font-size: .9em;
@@ -43,6 +48,10 @@ button{
     color: #000;
     margin: 5px;
     margin-top: 20px;
+}
+.cntrBtn button{
+    width: 50%;
+
 }
 .oitava{
     display: none;
